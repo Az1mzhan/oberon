@@ -3,11 +3,11 @@ import { UserMetrics } from "./UserMetrics";
 import { PostsComponent } from "./PostsComponent";
 import { User } from "../types/User";
 import { Outlet, useParams } from "react-router-dom";
-import { OtherUsersContext } from "../contexts/OtherUsersContext";
+import { UsersContext } from "../contexts/UsersContext";
 import { Box } from "@mui/material";
 
 export const Profile: FC = () => {
-  const otherUsers = useContext(OtherUsersContext);
+  const otherUsers = useContext(UsersContext);
   const { userID } = useParams();
   const user: User =
     typeof userID === "string"
@@ -16,7 +16,7 @@ export const Profile: FC = () => {
 
   return (
     <>
-      {user !== undefined && (
+      {user && (
         <Box className="profile-section">
           <UserMetrics user={user} />
           <PostsComponent user={user} />

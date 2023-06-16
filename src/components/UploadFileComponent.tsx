@@ -8,12 +8,12 @@ export const UploadFileComponent: FC = () => {
   const [isUploaded, setIsUploaded] = useState<boolean>(false);
 
   const handleMedia = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    if (e.target.files !== null) setFiles(Array.from(e.target.files));
+    setFiles(Array.from(e.target.files));
     setIsUploaded(true);
   };
 
   const formMedias = (): Media[] => {
-    let medias: Media[] = [];
+    const medias: Media[] = [];
     files.forEach((file: File, ind: number) =>
       medias.push({ id: ind, src: file.name })
     );

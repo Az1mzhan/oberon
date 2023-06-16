@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
-import { UserContext } from "./contexts/UserContext";
-import { OtherUsersContext } from "./contexts/OtherUsersContext";
+import { MyUserContext } from "./contexts/MyUserContext";
+import { UsersContext } from "./contexts/UsersContext";
 import "./App.css";
 import { User } from "./types/User";
 import {
@@ -41,32 +41,31 @@ const router = createBrowserRouter(
 
 const App: FC = () => {
   const theme = createTheme(AppTheme);
-  const [user, setUser] = useState<User>(null);
-  const [otherUsers, setOtherUsers] = useState<User[]>([]);
+  const [myUser, setMyUser] = useState<User>({} as User);
+  const [users, setUsers] = useState<User[]>([]);
 
   const fetchData = async (): Promise<void> => {
     try {
       const req = await fetch("http://localhost:4000/users");
       const json = await req.json();
-      await setUser(json[0]);
-      await setOtherUsers(json);
+      await setMyUser(json[0]);
+      await setUsers(json);
     } catch (e) {
       console.error(e);
     }
   };
   useEffect(() => {
     fetchData();
-    setOtherUsers((otherUsers) => otherUsers.filter((x) => x.id !== 0));
   }, []);
 
   return (
-    <UserContext.Provider value={user}>
-      <OtherUsersContext.Provider value={otherUsers}>
+    <MyUserContext.Provider value={myUser}>
+      <UsersContext.Provider value={users}>
         <ThemeProvider theme={theme}>
           <RouterProvider router={router} />
         </ThemeProvider>
-      </OtherUsersContext.Provider>
-    </UserContext.Provider>
+      </UsersContext.Provider>
+    </MyUserContext.Provider>
   );
 };
 

@@ -1,7 +1,7 @@
 import { FC, useContext } from "react";
 import { Comment } from "../types/Comment";
 import { Avatar, Box, Button, Typography } from "@mui/material";
-import { OtherUsersContext } from "../contexts/OtherUsersContext";
+import { UsersContext } from "../contexts/UsersContext";
 import { User } from "../types/User";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ interface Props {
 
 export const CommentComponent: FC<Props> = ({ comment }: Props) => {
   const navigate = useNavigate();
-  const otherUsers = useContext(OtherUsersContext);
+  const otherUsers = useContext(UsersContext);
   const user: User = otherUsers.find((user) => user.id === comment.userID);
 
   const redirectToProfile = (): void => {
@@ -34,7 +34,7 @@ export const CommentComponent: FC<Props> = ({ comment }: Props) => {
             paddingLeft: ".5vw",
           }}
         >
-          <Box className="comment-core-component" sx={{textAlign: "start"}}>
+          <Box className="comment-core-component" sx={{ textAlign: "start" }}>
             <Typography variant="body2">
               {`${user.username}: ${comment.msg}`}
             </Typography>

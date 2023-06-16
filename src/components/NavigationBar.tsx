@@ -11,10 +11,10 @@ import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { Section } from "../types/Section";
 import { Link, useLocation } from "react-router-dom";
-import { UserContext } from "../contexts/UserContext";
+import { MyUserContext } from "../contexts/MyUserContext";
 
 export const NavigationBar: FC = () => {
-  const user = useContext(UserContext);
+  const myUser = useContext(MyUserContext);
   const theme = useTheme();
   const sections: Section[] = [
     Section.HOME,
@@ -56,7 +56,7 @@ export const NavigationBar: FC = () => {
           component={Link}
           to={
             section === Section.PROFILE
-              ? `/${section}/${user.id}`
+              ? `/${section}/${myUser.id}`
               : `/${section}`
           }
           key={ind}

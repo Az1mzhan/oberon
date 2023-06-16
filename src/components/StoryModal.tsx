@@ -3,10 +3,10 @@ import { Avatar, Box, Modal, Typography, useTheme } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import { User } from "../types/User";
 import { MediaComponent } from "./MediaComponent";
-import { OtherUsersContext } from "../contexts/OtherUsersContext";
+import { UsersContext } from "../contexts/UsersContext";
 
 export const StoryModal: FC = () => {
-  const otherUsers = useContext(OtherUsersContext);
+  const otherUsers = useContext(UsersContext);
   const { userID } = useParams();
   const navigate = useNavigate();
   const theme = useTheme();
@@ -29,8 +29,8 @@ export const StoryModal: FC = () => {
   };
   return (
     <>
-
-      <Modal
+      {user && (
+        <Modal
           open={open}
           onClose={handleClose}
           sx={{
@@ -38,8 +38,8 @@ export const StoryModal: FC = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-      >
-        <Box
+        >
+          <Box
             className="story-modal"
             sx={{
               display: "flex",
@@ -51,8 +51,8 @@ export const StoryModal: FC = () => {
               border: `.125vw solid ${theme.palette.primary.main}`,
               borderRadius: ".5vw",
             }}
-        >
-          <Box
+          >
+            <Box
               className="story-modal-userinfo"
               sx={{
                 width: "100%",
@@ -61,29 +61,30 @@ export const StoryModal: FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
               }}
-          >
-            <Avatar
+            >
+              <Avatar
                 sx={{
                   margin: "2.5vh .75vw",
                   border: `.125vw solid ${theme.palette.primary.main}`,
                 }}
                 src={user.avatar}
-            />
-            <Typography
+              />
+              <Typography
                 variant="body1"
                 sx={{ color: theme.palette.primary.main, fontWeight: "bold" }}
-            >
-              {user.username}
-            </Typography>
-          </Box>
-          <MediaComponent
+              >
+                {user.username}
+              </Typography>
+            </Box>
+            <MediaComponent
               width="100%"
               height="100%"
               media={user.stories[storyID].media}
               isRendered={true}
-          />
-        </Box>
-      </Modal>
+            />
+          </Box>
+        </Modal>
+      )}
       <Outlet />
     </>
   );

@@ -1,4 +1,4 @@
 import {createContext} from "react";
 import {User} from "../types/User";
 
-export const UserContext = createContext<User>({} as User);
+export const UsersContext = createContext<User[]>([]);

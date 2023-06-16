@@ -7,13 +7,13 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { OtherUsersContext } from "../contexts/OtherUsersContext";
+import { UsersContext } from "../contexts/UsersContext";
 import { User } from "../types/User";
 import { useNavigate } from "react-router-dom";
 
 export const Search: FC = () => {
   const theme = useTheme();
-  const otherUsers = useContext(OtherUsersContext);
+  const otherUsers = useContext(UsersContext);
   const navigate = useNavigate();
 
   const [text, setText] = useState<string>("");

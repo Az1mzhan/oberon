@@ -11,7 +11,7 @@ import { Post } from "../types/Post";
 import { User } from "../types/User";
 import { PostComponent } from "./PostComponent";
 import { useNavigate, useParams } from "react-router-dom";
-import { OtherUsersContext } from "../contexts/OtherUsersContext";
+import { UsersContext } from "../contexts/UsersContext";
 import CloseIcon from "@mui/icons-material/Close";
 import { CommentComponent } from "./CommentComponent";
 import { Outlet } from "@mui/icons-material";
@@ -23,11 +23,11 @@ export const PostModal: FC = () => {
   const { userID } = useParams();
   const { postID } = useParams();
 
-  const otherUsers = useContext(OtherUsersContext);
+  const otherUsers = useContext(UsersContext);
   const user: User =
     typeof userID === "string"
       ? otherUsers.find((user) => user.id === parseInt(userID))
-      : ({} as User as User);
+      : ({} as User);
   const post: Post =
     typeof postID === "string"
       ? user.posts.find((post) => post.id === parseInt(postID))
