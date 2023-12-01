@@ -1,0 +1,71 @@
+.postModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxModal {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+  gap: 1.25%;
+}
+
+.closeButtonBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: normal;
+  width: 55%;
+}
+
+.closeButton:hover {
+  background-color: red !important;
+}
+
+.userTitleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: normal;
+  width: 55%;
+  height: 10%;
+}
+
+.usernameTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12.5%;
+  font-weight: bold !important;
+}
+
+.postCreatorAvatar {
+  width: 3.75vw !important;
+  height: 3.75vw !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw;
+}
+
+.postBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: normal;
+  width: 55vw;
+  height: 27.5vw;
+  margin-top: 3.25vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw;
+}
+
+.commentsGroup {
+  width: 50%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=postModal.module.css.map */

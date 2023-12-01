@@ -17,8 +17,8 @@ export const MediaComponent: FC<Props> = ({
   const [mediaType, setMediaType] = useState<MediaType>(MediaType.UNKNOWN);
 
   const defineMediaType = (): MediaType => {
-    const imageRegex = /\.(jpg|png|bmp)/i;
-    const videoRegex = /\.(mp4|mov)/i;
+    const imageRegex = /\.(jpg|jpeg|png|bmp)/i;
+    const videoRegex = /\.(mp4|mov|avi)/i;
     if (imageRegex.test(media.src)) return MediaType.PHOTO;
     else if (videoRegex.test(media.src)) return MediaType.VIDEO;
     return MediaType.UNKNOWN;

@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as m
+
+.postTile
+  @include m.square(15vw)
+  @include m.flexDisplay
+  border: .25vw solid white
+  box-shadow: black 0 1.25vw 5vw
+  transition: all .25s linear
+
+.postTileButton
+  @include m.square(100%)
+  padding: 0 !important

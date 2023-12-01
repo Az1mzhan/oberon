@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["App.sass"],"names":[],"mappings":"AAAQ;AAER;EACE;EACA;EACA;EACA;;;AAKF;EACE;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AACA;EACE;EACA;;;AAEN;EACE;EACA;;;AAGA;EACE","file":"App.css"}
+{"version":3,"sourceRoot":"","sources":["App.sass","styles/_colors.sass"],"names":[],"mappings":"AACQ;AACA;AAIR;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;EACA;EACA;;;AAEF;EACE,OClBW;EDmBX;;AACA;EACE;;;AAIJ;EACE;;;AAEF;EACE;;;AAIF;EACE;;;AAKF;EACE;EACA;EACA;;AAEE;EACE;EACA;;;AAEN;EACE;EACA;;;AAGA;EACE","file":"App.css"}

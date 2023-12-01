@@ -1,0 +1,43 @@
+@use "../../styles/_mixins.sass" as m
+
+.postModal
+  @include m.flexDisplay(center, center)
+
+.boxModal
+  @include m.square(100%)
+  @include m.flexDisplay(center, center, column)
+  padding-bottom: 2%
+  gap: 1.25%
+
+.closeButtonBox
+  @include m.flexDisplay(flex-end)
+  width: 55%
+
+.closeButton
+  &:hover
+    background-color: red !important
+
+.userTitleBox
+  @include m.flexDisplay(flex-start)
+  width: 55%
+  height: 10%
+
+.usernameTitle
+  @include m.flexDisplay($alignItems: center)
+  gap: 12.5%
+  font-weight: bold !important
+
+.postCreatorAvatar
+  @include m.square(3.75vw)
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw
+
+.postBlock
+  @include m.flexDisplay
+  width: 55vw
+  height: 27.5vw
+  margin-top: 3.25vh
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw
+
+.commentsGroup
+  width: 50%
+  height: 100%

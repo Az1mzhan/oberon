@@ -1,0 +1,15 @@
+.bottomNavigation {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  width: 100%;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=navigationBar.module.css.map */

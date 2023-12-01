@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as m
+
+.recordStoryComponent
+  @include m.flexDisplay($justifyContent: center, $flexDirection: column)
+
+.closeButtonContainer
+  @include m.flexDisplay
+  width: 100%
+
+.recordButtonContainer
+  @include m.flexDisplay(center)
+  padding: 2.5vh 0

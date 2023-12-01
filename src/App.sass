@@ -1,10 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+@use "./styles/_colors.sass" as c
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap")
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap')
+
+// Default full-size container
+
+html, body
+  height: 100%
+  margin: 0
 
 body
-  width: 100%
-  margin: 0
-  display: block !important
-  font-family: 'Montserrat', sans-serif
+  display: flex
+  flex-direction: column
+
+#root
+  display: flex
+  justify-content: center
+  flex-grow: 1
+  min-height: 100vh
+
+a
+  color: c.$acid-green
+  font-weight: bold
+  &:hover
+    opacity: .5
+
+// Text Field
+
+.MuiInputLabel-formControl
+  color: black !important
+
+.MuiInputLabel-shrink
+  color: c.$acid-green !important
+
+// Required icon
+
+.MuiFormLabel-asterisk, .MuiFormControlLabel-asterisk
+  color: red
 
 // HOME PAGe
 
@@ -14,10 +45,6 @@ body
   justify-content: start
   gap: 2.5vw
   .story
-    width: 10vw
-    display: flex
-    flex-direction: column
-    justify-content: center
     p
       display: flex
       justify-content: center

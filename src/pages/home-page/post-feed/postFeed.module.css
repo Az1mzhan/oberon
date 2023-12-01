@@ -1,0 +1,8 @@
+.postFeed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*# sourceMappingURL=postFeed.module.css.map */

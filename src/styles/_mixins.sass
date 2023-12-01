@@ -1,0 +1,16 @@
+@mixin flexDisplay($justifyContent: flex-start, $alignItems: normal, $flexDirection: row)
+  display: flex
+  flex-direction: $flexDirection
+  justify-content: $justifyContent
+  align-items: $alignItems
+
+@mixin position($position: static, $top: auto, $left: auto, $bottom: auto, $right: auto)
+  position: $position
+  top: $top
+  bottom: $bottom
+  left: $left
+  right: $right
+
+@mixin square($width)
+  width: $width !important
+  height: $width !important

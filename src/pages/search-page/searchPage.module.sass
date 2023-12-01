@@ -1,0 +1,31 @@
+@use "../../styles/_mixins.sass" as m
+
+*, input
+  color: white !important
+
+.searchPage
+  @include m.flexDisplay($alignItems: center, $flexDirection: column)
+  width: 100vw
+  height: 100vh
+  gap: 5vh
+  padding-top: 5vh
+
+.searchFieldContainer
+  @include m.flexDisplay(center)
+
+.searchField, .searchList
+  width: 20vw
+
+.searchListMember
+  @include m.flexDisplay(center, center, column)
+
+.searchListMemberButton
+  width: 100%
+  height: 100%
+
+.searchListMemberUsernameContainer
+  width: 10vw
+
+.searchListMemberUsername
+  padding-left: 1.25vw
+  text-transform: lowercase

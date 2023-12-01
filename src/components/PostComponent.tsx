@@ -1,6 +1,6 @@
 import { Post } from "../types/Post";
 import { FC } from "react";
-import { MediaCarousel } from "./MediaCarousel";
+import { MediaCarousel } from "./media-carousel/MediaCarousel";
 import { SxProps } from "@mui/system";
 import { Box } from "@mui/material";
 

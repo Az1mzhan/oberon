@@ -1,0 +1,36 @@
+@use "../../../styles/mixins" as m
+
+.loginSpace
+  @include m.flexDisplay($alignItems: center, $flexDirection: column)
+  width: 100%
+  height: 100%
+
+.loginSpaceBlock
+  @include m.flexDisplay($alignItems: center, $flexDirection: column)
+  width: 25vw
+  box-shadow: .25vw .5vw .5vw black
+
+.loginBlock
+  height: 70vh
+  gap: 7.5vh
+  margin: 7.5vh 0
+  padding: 5vh 0
+
+.loginHeader
+  width: fit-content
+  font-weight: bold
+  text-transform: uppercase
+
+.loginBtn
+  width: 50%
+  color: white
+  transition: transform .2s linear
+  &:hover
+    transform: scale(.95)
+
+.loginBtnTypography
+  font-weight: bold
+
+@media (min-width: 376px) and (max-width: 575px)
+  .loginSpaceBlock
+    width: 90vw

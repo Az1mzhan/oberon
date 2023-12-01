@@ -1,0 +1,15 @@
+@use "../../styles/_mixins.sass" as m
+
+.commentComponent
+  @include m.flexDisplay
+  width: 100%
+
+.profileRedirectButton
+  width: 100%
+
+.commentTextData
+  @include m.flexDisplay($alignItems: flex-start, $flexDirection: column)
+  padding-left: .5vw
+
+.commentCoreComponent
+  text-align: start

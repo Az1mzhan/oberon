@@ -1,0 +1,40 @@
+@use "../../../styles/mixins" as m
+
+.userMetrics
+  @include m.flexDisplay
+  width: 100vw
+  height: 20vh
+  gap: 20vw
+
+.userTitleRow, .profileTitle, .userInfoStats
+  @include m.flexDisplay($alignItems: center)
+
+.userTitleRow
+  width: 25vw
+
+.profileMainInfo
+  @include m.flexDisplay($justifyContent: center, $flexDirection: column)
+  height: 100%
+  gap: 2.5vh
+  padding-left: 1vw
+
+.profileTitle
+  gap: 1vw
+
+.userAvatar
+  @include m.square(5vw)
+  border: .25vw solid white
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw
+
+.userInfoBlock
+  @include m.flexDisplay($flexDirection: column)
+
+.userInfoStats
+  height: 100%
+  gap: 12.5vw
+
+.userPublicationsStats
+  margin: 1vh .75vw
+
+.userPublicationsStats, .userSubscribersStats, .userSubscriptionsStats
+  @include m.flexDisplay($alignItems: center, $flexDirection: column)

@@ -1,0 +1,9 @@
+.postsBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  margin-top: 10vh;
+}
+
+/*# sourceMappingURL=postsComponent.module.css.map */

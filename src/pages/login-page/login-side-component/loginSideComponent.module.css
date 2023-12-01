@@ -1,0 +1,36 @@
+.loginSideComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  width: 35%;
+  padding: 12.5vw 0;
+}
+
+.sideBlockTextSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 300px;
+  gap: 5vw;
+}
+
+.loginSideHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-family: "Alata", sans-serif !important;
+  text-transform: uppercase;
+}
+
+.mottoParagraph {
+  width: 25px;
+  border-left: 15px solid white;
+  padding-left: 25px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=loginSideComponent.module.css.map */

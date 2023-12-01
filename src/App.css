@@ -1,21 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-body {
-  width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+html, body {
+  height: 100%;
   margin: 0;
-  display: block !important;
-  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+a {
+  color: #7ade01;
+  font-weight: bold;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+.MuiInputLabel-formControl {
+  color: black !important;
+}
+
+.MuiInputLabel-shrink {
+  color: #7ade01 !important;
+}
+
+.MuiFormLabel-asterisk, .MuiFormControlLabel-asterisk {
+  color: red;
 }
 
 .story-panel {
   display: flex;
   justify-content: start;
   gap: 2.5vw;
-}
-.story-panel .story {
-  width: 10vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .story-panel .story p {
   display: flex;

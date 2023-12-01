@@ -1,0 +1,66 @@
+.userMetrics {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: normal;
+  width: 100vw;
+  height: 20vh;
+  gap: 20vw;
+}
+
+.userTitleRow, .profileTitle, .userInfoStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userTitleRow {
+  width: 25vw;
+}
+
+.profileMainInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  height: 100%;
+  gap: 2.5vh;
+  padding-left: 1vw;
+}
+
+.profileTitle {
+  gap: 1vw;
+}
+
+.userAvatar {
+  width: 5vw !important;
+  height: 5vw !important;
+  border: 0.25vw solid white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5vw 15vw;
+}
+
+.userInfoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+}
+
+.userInfoStats {
+  height: 100%;
+  gap: 12.5vw;
+}
+
+.userPublicationsStats {
+  margin: 1vh 0.75vw;
+}
+
+.userPublicationsStats, .userSubscribersStats, .userSubscriptionsStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*# sourceMappingURL=userMetrics.module.css.map */

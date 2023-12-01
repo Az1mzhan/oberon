@@ -1,0 +1,11 @@
+.storyPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  width: 100%;
+  padding: 1% 0;
+  gap: 2.5vw;
+}
+
+/*# sourceMappingURL=storyPanel.module.css.map */
