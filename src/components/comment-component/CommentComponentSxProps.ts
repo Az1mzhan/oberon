@@ -8,6 +8,7 @@ const profileRedirectBtnSxProps: SxProps = {
 };
 
 const commentMessageSxProps: SxProps = {
+  color: "black",
   fontWeight: "bolder",
 };
 

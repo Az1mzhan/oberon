@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["profilePage.module.sass"],"names":[],"mappings":"AAAA;EACE;EACA","file":"profilePage.module.css"}
+{"version":3,"sourceRoot":"","sources":["profilePage.module.sass","../../styles/_mixins.sass"],"names":[],"mappings":"AAEA;ECDE;EACA,gBDC4D;ECA5D,iBAHkC;EAIlC,aDDoC;EACpC;EACA","file":"profilePage.module.css"}

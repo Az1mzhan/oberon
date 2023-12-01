@@ -25,7 +25,7 @@ export const CommentComponent: FC<Props> = ({ comment }: Props) => {
   const theme = useTheme();
 
   const commentMessageColorSxProps: SxProps = {
-    color: theme.palette.text.primary,
+    color: `${theme.palette.text.primary} !important`,
   };
 
   const navigate = useNavigate();
@@ -65,7 +65,10 @@ export const CommentComponent: FC<Props> = ({ comment }: Props) => {
               <Typography
                 className="commentMessage"
                 variant="body2"
-                sx={CommentComponentSxProps.commentMessageSxProps}
+                sx={{
+                  ...commentMessageColorSxProps,
+                  ...CommentComponentSxProps.commentMessageSxProps,
+                }}
               >
                 {`${user.username}: ${comment.msg}`}
               </Typography>

@@ -26,6 +26,11 @@ export const MediaCarousel: FC<Props> = ({
   const mediaStepperSxProps: SxProps = {
     position: "relative",
     backgroundColor: "transparent",
+    color: "white !important",
+    ".MuiMobileStepper-dot": { backgroundColor: theme.palette.text.secondary },
+    ".MuiMobileStepper-dotActive": {
+      backgroundColor: theme.palette.primary.main,
+    },
   };
 
   const iconButtonSxProps: SxProps = {

@@ -1,0 +1,8 @@
+.closeButton {
+  border-radius: 100%;
+}
+.closeButton:hover {
+  background-color: red;
+}
+
+/*# sourceMappingURL=closeButton.module.css.map */

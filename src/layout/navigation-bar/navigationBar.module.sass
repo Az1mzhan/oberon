@@ -1,7 +1,9 @@
 @use "../../styles/mixins" as m
 
 .bottomNavigation
-  @include m.position($position: fixed, $left: 0, $bottom: 0)
+  @include m.position($position: sticky, $left: 0, $bottom: 0)
   @include m.flexDisplay(center)
   width: 100%
+  margin-top: auto
+  padding: 2.5vh
   z-index: 1

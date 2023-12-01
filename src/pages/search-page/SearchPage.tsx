@@ -70,7 +70,12 @@ const SearchPage: FC = () => {
             variant="standard"
             label="Enter an account's name"
             onChange={handleText}
-            sx={{ color: "white !important" }}
+            InputLabelProps={{
+              className: styles.searchFieldIdle,
+            }}
+            inputProps={{
+              className: styles.searchFieldIdle,
+            }}
           />
         </Box>
         <Box className={styles.searchList}>

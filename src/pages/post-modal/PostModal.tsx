@@ -16,7 +16,8 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import { SxProps } from "@mui/system";
 import styles from "./postModal.module.css";
-import {Comment} from "../../types/Comment";
+import { Comment } from "../../types/Comment";
+import { CloseButton } from "../../components/close-button/CloseButton";
 
 const PostModal: FC = () => {
   const theme = useTheme();
@@ -26,7 +27,7 @@ const PostModal: FC = () => {
   };
 
   const userTitleBoxSxProps: SxProps = {
-    color: theme.palette.text.primary,
+    color: theme.palette.text.secondary,
   };
 
   const postBlockSxProps: SxProps = {
@@ -65,13 +66,7 @@ const PostModal: FC = () => {
       <Modal className={styles.postModal} open={open} sx={postModalSxProps}>
         <Box className={styles.boxModal}>
           <Box className={styles.closeButtonBox}>
-            <IconButton
-              className={styles.closeButton}
-              onClick={handleClose}
-              size="medium"
-            >
-              <CloseIcon />
-            </IconButton>
+            <CloseButton handleClose={handleClose} />
           </Box>
           <Box className={styles.userTitleBox} sx={userTitleBoxSxProps}>
             <Typography className={styles.usernameTitle} variant="h6">

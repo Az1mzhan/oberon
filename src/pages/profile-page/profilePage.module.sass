@@ -1,3 +1,6 @@
+@use "../../styles/_mixins.sass" as m
+
 .profileSection
+  @include m.flexDisplay($alignItems: center, $flexDirection: column)
   height: auto
   min-height: 100vh

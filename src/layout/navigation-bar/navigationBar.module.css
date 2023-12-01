@@ -1,5 +1,5 @@
 .bottomNavigation {
-  position: fixed;
+  position: sticky;
   top: auto;
   bottom: 0;
   left: 0;
@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: normal;
   width: 100%;
+  margin-top: auto;
+  padding: 2.5vh;
   z-index: 1;
 }
 

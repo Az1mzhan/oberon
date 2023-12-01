@@ -3,8 +3,8 @@ import { CommentComponent } from "../comment-component/CommentComponent";
 import React, { FC } from "react";
 import { FeedPost } from "../../types/FeedPost";
 import { Comment } from "../../types/Comment";
-import { Modal, Box, IconButton, Typography } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import { Modal, Box, Typography } from "@mui/material";
+import { CloseButton } from "../close-button/CloseButton";
 
 interface Props {
   post: FeedPost;
@@ -30,11 +30,9 @@ export const FeedPostCommentModal: FC<Props> = ({
               FeedPostCommentModalSxProps.commentsModalCloseBtnContainerSxProps
             }
           >
-            <IconButton
+            <CloseButton
               className="commentsModalCloseBtn"
-              onClick={onClick}
-              children={<CloseIcon />}
-              sx={FeedPostCommentModalSxProps.closeModalBtnSxProps}
+              handleClose={onClick}
             />
           </Box>
           <Box

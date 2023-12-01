@@ -34,14 +34,18 @@ export const FeedPostComponent: FC<Props> = ({ post }: Props) => {
   };
 
   const closeModal = (e: React.ChangeEvent<HTMLButtonElement>) => {
-    if (e.target.className.includes("likesModalCloseBtn")) {
-      dispatchPostModal({
-        type: "postModal/closeLikesModal",
-      });
-    } else if (e.target.className.includes("commentsModalCloseBtn")) {
-      dispatchPostModal({
-        type: "postModal/closeCommentsModal",
-      });
+    if (e.target == e.currentTarget) {
+      e.stopPropagation();
+
+      if (e.target.className.includes("likesModalCloseBtn")) {
+        dispatchPostModal({
+          type: "postModal/closeLikesModal",
+        });
+      } else if (e.target.className.includes("commentsModalCloseBtn")) {
+        dispatchPostModal({
+          type: "postModal/closeCommentsModal",
+        });
+      }
     }
   };
 

@@ -2,8 +2,8 @@ import FeedPostLikeModalSxProps from "./FeedPostLikeModalSxProps";
 import { UserInfoComponent } from "../user-info-component/UserInfoComponent";
 import React, { FC } from "react";
 import { FeedPost } from "../../types/FeedPost";
-import { Box, IconButton, Modal, Typography } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import { Box, Modal, Typography } from "@mui/material";
+import { CloseButton } from "../close-button/CloseButton";
 
 interface Props {
   post: FeedPost;
@@ -27,12 +27,7 @@ export const FeedPostLikeModal: FC<Props> = ({
             className="likesModalCloseBtnContainer"
             sx={FeedPostLikeModalSxProps.likesModalCloseBtnContainerSxProps}
           >
-            <IconButton
-              className="likesModalCloseBtn"
-              onClick={onClick}
-              children={<CloseIcon />}
-              sx={FeedPostLikeModalSxProps.closeModalBtnSxProps}
-            />
+            <CloseButton className="likesModalCloseBtn" handleClose={onClick} />
           </Box>
           <Box
             className="likesStatistics"

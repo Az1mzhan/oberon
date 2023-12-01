@@ -1,7 +1,6 @@
 import { SxProps } from "@mui/system";
 
 const authorUsernameSxProps: SxProps = {
-  color: "black",
   fontWeight: "bolder",
   textTransform: "none",
 };

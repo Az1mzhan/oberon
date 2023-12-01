@@ -6,12 +6,16 @@
 .searchPage
   @include m.flexDisplay($alignItems: center, $flexDirection: column)
   width: 100vw
-  height: 100vh
+  height: auto
+  min-height: 100vh
   gap: 5vh
   padding-top: 5vh
 
 .searchFieldContainer
   @include m.flexDisplay(center)
+
+.searchFieldIdle
+  color: white !important
 
 .searchField, .searchList
   width: 20vw

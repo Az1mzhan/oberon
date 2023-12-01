@@ -15,7 +15,7 @@ export const UserInfoComponent: FC = ({ userID }: Props) => {
   const theme = useTheme();
 
   const userInfoColorSxProps: SxProps = {
-    color: theme.palette.text.primary,
+    color: `${theme.palette.text.primary} !important`,
   };
 
   const user: User = useUserById(userID);

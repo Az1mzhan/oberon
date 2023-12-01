@@ -3,4 +3,8 @@
   height: 10%;
 }
 
-/*# sourceMappingURL=carousel.module.css.map */
+.completedStep {
+  color: white !important;
+}
+
+/*# sourceMappingURL=mediaCarousel.module.css.map */
